@@ -18,9 +18,5 @@
 html {
 	/* Fonts */
 	font-size: 62.5%;
-	font-family: "DM Sans", sans-serif;
-}
-
-body {
-	color: red;
+	font-family: "Roboto", sans-serif;
 }
