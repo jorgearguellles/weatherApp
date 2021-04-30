@@ -3,28 +3,158 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 2rem;
+	border: 1px solid blue;
 }
 
+/* Containers  */
+
 .forecastContainer {
-	/* border: 1px solid red; */
 	width: 22%;
 }
 
 .titleSection {
+	font-weight: 300;
 	font-size: 2rem;
 	margin-bottom: 2.5rem;
 }
 .visitContainer {
-	border: 1px solid green;
 	width: 22%;
 }
 
 .reviewsContainer {
-	border: 1px solid red;
-	width: 22%;
+	width: 20%;
 }
 
 .otherPlacesContainer {
-	border: 1px solid green;
 	width: 25%;
+	border: 1px solid red;
+}
+
+/* Place to visit - Section */
+
+.visitNamePlace {
+	border-radius: 2.5rem;
+	height: 14.5rem;
+	background-image: url("../../img/street.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 1rem;
+	display: flex;
+}
+
+.visitNamePlace p {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--just-white);
+}
+
+.visitNamePlace img {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+/* Top Reviews - Section */
+
+.titleContainer {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3.2rem;
+}
+
+.review {
+	color: var(--color-font-day);
+	font-size: 1.2rem;
+	display: block;
+}
+
+.imgContainer {
+	display: flex;
+}
+
+.imgContainer img {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 0.5rem;
+	margin-left: 0.4rem;
+}
+
+.imgContainer p {
+	display: inline;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: var(--just-white);
+	background-color: var(--light-purple);
+	padding: 0.2rem;
+	border-radius: 0.5rem;
+	margin-left: 0.4rem;
+}
+
+.reviewPlace {
+	border-radius: 1.5rem;
+	height: 5rem;
+	background-image: url("../../img/museum.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 1rem;
+	display: flex;
+	margin-bottom: 1.9rem;
+}
+
+.reviewPlace p {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--just-white);
+}
+
+.reviewPlace img {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.reviewPlacePlus {
+	border-bottom-left-radius: 1.5rem;
+	border-top-left-radius: 1.5rem;
+	border-bottom-right-radius: 3rem;
+	border-top-right-radius: 3rem;
+	height: 8rem;
+	background-image: url("../../img/placePlus.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
+}
+
+.reviewPinContainer {
+	margin: 1rem 0 0 1rem;
+}
+
+.reviewPlacePlus p {
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--just-white);
+	z-index: 1;
+}
+
+.reviewPlacePlus img {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.reviewContainer {
+	width: 5rem;
+	height: 100%;
+	border-radius: 30px;
+	background-color: var(--dark-purple);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+
+.reviewPlus {
+	font-size: 1rem;
+	color: var(--just-white);
 }

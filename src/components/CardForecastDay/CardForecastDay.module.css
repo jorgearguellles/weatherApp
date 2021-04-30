@@ -3,12 +3,12 @@
 	border-right: none;
 	border-radius: 10px;
 	width: 90%;
-	height: 5rem;
+	height: 4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 1;
-	margin-top: 1rem;
+	margin-top: 1.3rem;
 }
 
 .imgWeather {
@@ -37,7 +37,7 @@
 }
 
 .weatherNumberContainer {
-	width: 6.3rem;
+	width: 5.2rem;
 	height: 100%;
 	border-radius: 10px;
 	background-color: var(--dark-purple);
