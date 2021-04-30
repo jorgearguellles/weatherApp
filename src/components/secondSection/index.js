@@ -5,6 +5,7 @@ import CardForecastDay from "../CardForecastDay/index.js";
 import imgPin from "../../img/locationPin.png";
 import imgFace from "../../img/face.jpg";
 import imgMuseum from "../../img/museum.jpg";
+import imgSun from "../../img/sun.png";
 
 const SecondSection = () => {
 	return (
@@ -59,7 +60,34 @@ const SecondSection = () => {
 					</div>
 				</div>
 			</div>
-			<div className={styles.otherPlacesContainer}>Paris</div>
+			<div className={styles.otherPlacesContainer}>
+				<div className={styles.topSection}>
+					<div className={styles.infoParis}>
+						<div className={styles.imgParisContainer}>
+							<img src={imgSun} alt="Img Sun" />
+						</div>
+						<div className={styles.tempAndCityContainer}>
+							<div className={styles.temp}>
+								<p className={styles.number}>12</p>
+								<p className={styles.grades}>ºC</p>
+							</div>
+							<div className={styles.city}>
+								<p className={styles.cityName}>Paris</p>
+								<p className={styles.countryName}>Francia</p>
+							</div>
+						</div>
+					</div>
+
+					<div className={styles.textContainer}>
+						<p>Humidity 8%</p>
+						<p>West</p>
+						<p>6.5km/h</p>
+					</div>
+				</div>
+				<div className={styles.bottomSection}>
+					<button className={styles.button}> Add Locations</button>
+				</div>
+			</div>
 		</div>
 	);
 };
