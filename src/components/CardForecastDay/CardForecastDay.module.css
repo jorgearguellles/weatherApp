@@ -2,13 +2,18 @@
 	border: 1px solid var(--border-color);
 	border-right: none;
 	border-radius: 10px;
-	width: 90%;
+	width: 100%;
 	height: 6.2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 1;
 	margin-top: 1.3rem;
+}
+
+.dayContainer:hover {
+	box-shadow: 2px 3px 5px 3px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
 }
 
 .imgWeather {
@@ -40,15 +45,20 @@
 	width: 7rem;
 	height: 100%;
 	border-radius: 10px;
-	background-color: var(--dark-purple);
+	background-color: var(--ultra-light-purple);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	z-index: 2;
 }
 
-.weatherNumber {
+.weatherNumberContainer:hover {
+	background-color: var(--dark-purple);
 	color: var(--just-white);
+}
+
+.weatherNumber {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
