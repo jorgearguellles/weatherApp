@@ -4,7 +4,6 @@ import styles from "./SecondSection.module.css";
 import CardForecastDay from "../CardForecastDay/index.js";
 import imgPin from "../../img/locationPin.png";
 import imgFace from "../../img/face.jpg";
-import imgMuseum from "../../img/museum.jpg";
 import imgSun from "../../img/sun.png";
 
 const SecondSection = () => {
@@ -77,7 +76,6 @@ const SecondSection = () => {
 							</div>
 						</div>
 					</div>
-
 					<div className={styles.textContainer}>
 						<p>Humidity 8%</p>
 						<p>West</p>

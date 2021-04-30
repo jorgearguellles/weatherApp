@@ -9,7 +9,7 @@
 /* Containers  */
 
 .forecastContainer {
-	width: 22%;
+	width: 23%;
 }
 
 .titleSection {
@@ -18,7 +18,7 @@
 	margin-bottom: 3.3rem;
 }
 .visitContainer {
-	width: 22%;
+	width: 23%;
 }
 
 .reviewsContainer {
@@ -27,7 +27,7 @@
 }
 
 .otherPlacesContainer {
-	width: 25%;
+	width: 24%;
 }
 
 /* Place to visit - Section */
@@ -198,20 +198,20 @@
 }
 
 .temp {
-	margin-right: 1rem;
+	margin-right: 2rem;
 }
 
 .temp .number {
-	font-size: 3rem;
+	font-size: 3.5rem;
 }
 
 .city {
 	border-left: 1px solid var(--border-color);
-	padding-left: 1rem;
+	padding-left: 2.3rem;
 	margin: auto;
 }
 .cityName {
-	font-size: 1.8rem;
+	font-size: 2.3rem;
 	font-weight: bold;
 }
 
