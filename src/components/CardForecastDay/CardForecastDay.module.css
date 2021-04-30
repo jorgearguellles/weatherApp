@@ -1,0 +1,52 @@
+.dayContainer {
+	border: 1px solid var(--border-color);
+	border-right: none;
+	border-radius: 10px;
+	width: 90%;
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+	margin-top: 1rem;
+}
+
+.imgWeather {
+	width: 2rem;
+	height: 2rem;
+	margin-left: 1rem;
+}
+
+.dayWeatherContainer {
+	display: flex;
+	align-items: center;
+
+	width: auto;
+}
+
+.letterContainer {
+	margin-left: 0.5rem;
+}
+.day {
+	font-size: 1.2rem;
+}
+
+.weather {
+	margin-top: 0.2rem;
+	font-size: 0.8rem;
+}
+
+.weatherNumberContainer {
+	width: 6.3rem;
+	height: 100%;
+	border-radius: 10px;
+	background-color: var(--dark-purple);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+
+.weatherNumber {
+	color: var(--just-white);
+}

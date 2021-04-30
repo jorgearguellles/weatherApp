@@ -1,0 +1,30 @@
+.container {
+	height: 40vh;
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+}
+
+.forecastContainer {
+	/* border: 1px solid red; */
+	width: 22%;
+}
+
+.titleSection {
+	font-size: 2rem;
+	margin-bottom: 2.5rem;
+}
+.visitContainer {
+	border: 1px solid green;
+	width: 22%;
+}
+
+.reviewsContainer {
+	border: 1px solid red;
+	width: 22%;
+}
+
+.otherPlacesContainer {
+	border: 1px solid green;
+	width: 25%;
+}
