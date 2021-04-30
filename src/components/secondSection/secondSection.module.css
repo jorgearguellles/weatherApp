@@ -1,15 +1,17 @@
 .container {
-	height: 40vh;
+	height: auto;
 	display: flex;
-	justify-content: space-between;
-	padding: 2rem;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 	border: 1px solid blue;
 }
 
 /* Containers  */
 
 .forecastContainer {
-	width: 23%;
+	width: 31rem;
+	min-width: 32rem;
+	margin: 1rem;
 }
 
 .titleSection {
@@ -18,16 +20,21 @@
 	margin-bottom: 3.3rem;
 }
 .visitContainer {
-	width: 23%;
+	margin: 1rem;
+	width: 32rem;
+	min-width: 32rem;
 }
 
 .reviewsContainer {
-	width: 20%;
-	/* max-width: 1150px; */
+	margin: 1rem;
+	width: 30rem;
+	min-width: 32rem;
 }
 
 .otherPlacesContainer {
-	width: 24%;
+	margin: 2rem;
+	width: 33rem;
+	min-width: 32rem;
 }
 
 /* Place to visit - Section */
