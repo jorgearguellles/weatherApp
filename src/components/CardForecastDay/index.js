@@ -1,8 +1,6 @@
 import React from "react";
 
 import styles from "./CardForecastDay.module.css";
-import imgCloud from "../../img/cloud.png";
-import imgRain from "../../img/cloudRain.png";
 import imgSun from "../../img/sun.png";
 
 const CardForecastDay = (props) => {
