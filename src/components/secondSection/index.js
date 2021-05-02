@@ -6,7 +6,7 @@ import imgPin from "../../img/locationPin.png";
 import imgFace from "../../img/face.jpg";
 import imgSun from "../../img/sun.png";
 
-const SecondSection = () => {
+const SecondSection = (props) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.forecastContainer}>
@@ -67,19 +67,19 @@ const SecondSection = () => {
 						</div>
 						<div className={styles.tempAndCityContainer}>
 							<div className={styles.temp}>
-								<p className={styles.number}>12</p>
+								<p className={styles.number}>{props.temperature}</p>
 								<p className={styles.grades}>ºC</p>
 							</div>
 							<div className={styles.city}>
-								<p className={styles.cityName}>Paris</p>
-								<p className={styles.countryName}>Francia</p>
+								<p className={styles.cityName}>{props.cityName}</p>
+								<p className={styles.countryName}>{props.countryName}</p>
 							</div>
 						</div>
 					</div>
 					<div className={styles.textContainer}>
-						<p>Humidity 8%</p>
+						<p>Humidity {props.humidity}%</p>
 						<p>West</p>
-						<p>6.5km/h</p>
+						<p>{props.windSpeed}km/h</p>
 					</div>
 				</div>
 				<div className={styles.bottomSection}>

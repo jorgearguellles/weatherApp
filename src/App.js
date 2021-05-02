@@ -5,18 +5,17 @@ import MainSection from "./components/MainSection/index.js";
 import SecondSection from "./components/SecondSection/index.js";
 
 const App = () => {
-	const [weatherData, setWeatherData] = useState({});
+	const [parisData, setParisData] = useState({});
 
 	useEffect(() => {
 		makeRequest(
 			"GET",
-			"http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=a4d7ee06ed7e293bdc37a1d8b18e7424",
+			"http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=a4d7ee06ed7e293bdc37a1d8b18e7424&units=metric",
 			function (error, data) {
 				if (error) {
 					throw error;
 				}
-				setWeatherData(JSON.parse(data));
-				// console.log(weatherData);
+				setParisData(JSON.parse(data));
 			}
 		);
 	});
@@ -38,8 +37,13 @@ const App = () => {
 	return (
 		<div>
 			<MainSection />
-			<SecondSection />
-			{/* {weatherData.name} */}
+			<SecondSection
+				cityName={parisData.name}
+				countryName={parisData.sys.country}
+				temperature={parisData.main.temp}
+				humidity={parisData.main.humidity}
+				windSpeed={parisData.wind.speed}
+			/>
 		</div>
 	);
 };

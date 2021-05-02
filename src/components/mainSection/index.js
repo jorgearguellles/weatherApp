@@ -16,7 +16,7 @@ const MainSection = () => {
 					<img className={styles.imgWeather} src={imgSun} alt="img cloud" />
 				</div>
 				<div className={styles.centigrades}>
-					<p className={styles.weatherNumber}>31</p>
+					<p className={styles.weatherNumber}>00</p>
 					<p>ºC</p>
 				</div>
 			</div>
