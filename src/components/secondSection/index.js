@@ -4,7 +4,8 @@ import styles from "./SecondSection.module.css";
 import CardForecastDay from "../CardForecastDay/index.js";
 import imgPin from "../../img/locationPin.png";
 import imgFace from "../../img/face.jpg";
-import imgSun from "../../img/sun.png";
+import imgWeather from "../../img/sun.png";
+// import imgWeather from "http://openweathermap.org/img/wn/10d@2x.png";
 
 const SecondSection = (props) => {
 	return (
@@ -63,7 +64,7 @@ const SecondSection = (props) => {
 				<div className={styles.topSection}>
 					<div className={styles.infoParis}>
 						<div className={styles.imgParisContainer}>
-							<img src={imgSun} alt="Img Sun" />
+							<img src={imgWeather} alt="Img Sun" />
 						</div>
 						<div className={styles.tempAndCityContainer}>
 							<div className={styles.temp}>
