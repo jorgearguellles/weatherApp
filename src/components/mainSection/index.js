@@ -4,7 +4,7 @@ import styles from "./MainSection.module.css";
 import imgPin from "../../img/locationPin.png";
 import imgSun from "../../img/sun.png";
 
-const MainSection = () => {
+const MainSection = (props) => {
 	return (
 		<div>
 			<div className={styles.weatherPlace}>
@@ -19,7 +19,7 @@ const MainSection = () => {
 						<img className={styles.imgWeather} src={imgSun} alt="img cloud" />
 					</div>
 					<div className={styles.centigrades}>
-						<p className={styles.weatherNumber}>00</p>
+						<p className={styles.weatherNumber}>{props.temperature}</p>
 						<p>ºC</p>
 					</div>
 				</div>
