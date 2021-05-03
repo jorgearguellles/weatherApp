@@ -16,7 +16,7 @@
 }
 
 .weatherPlace p {
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: bold;
 	color: var(--dark-purple);
 }
@@ -24,8 +24,8 @@
 .weatherPlace img {
 	background-color: var(--dark-purple);
 	border-radius: 3rem;
-	width: 2rem;
-	height: 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
 	margin: 0 2rem 0 2rem;
 }
 
@@ -33,7 +33,7 @@
 
 .weatherPlaceContainer {
 	background-color: var(--light-purple);
-	width: 10rem;
+	width: 9rem;
 	height: 19rem;
 	border-top-right-radius: 3rem;
 	border-bottom-right-radius: 3rem;
@@ -47,19 +47,19 @@
 	background-color: var(--dark-purple);
 	border-top-right-radius: 3rem;
 	border-bottom-right-radius: 3rem;
-	width: 10rem;
+	width: 9rem;
 	height: 10rem;
 }
 
 .imgWeather {
 	width: 4rem;
 	height: 4rem;
-	margin: 2.5rem;
+	margin: 2.5rem 2rem;
 }
 
 .centigrades {
 	display: flex;
-	margin: 2.5rem;
+	margin: 2.5rem 2rem;
 }
 .centigrades p {
 	color: var(--just-white);
