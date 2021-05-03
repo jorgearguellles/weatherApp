@@ -20,9 +20,6 @@ const App = () => {
 				setParisData(data);
 			}
 		);
-	});
-
-	useEffect(() => {
 		makeRequest(
 			"https://api.openweathermap.org/data/2.5/onecall?lat=4.6097&lon=-74.0817&exclude=minutely,alerts,hourly&appid=a4d7ee06ed7e293bdc37a1d8b18e7424&units=metric",
 			function (error, data) {
