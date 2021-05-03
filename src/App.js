@@ -47,22 +47,22 @@ const App = () => {
 				countryName={
 					parisData.sys !== undefined && parisData.sys.country !== " "
 						? parisData.sys.country
-						: console.log("Loading...")
+						: "Loading..."
 				}
 				temperature={
 					parisData.main !== undefined && parisData.main.temp !== " "
 						? parisData.main.temp
-						: console.log("Loading...")
+						: "Loading..."
 				}
 				humidity={
 					parisData.main !== undefined && parisData.main.humidity !== " "
 						? parisData.main.humidity
-						: console.log("Loading...")
+						: "Loading..."
 				}
 				windSpeed={
 					parisData.main !== undefined && parisData.wind.speed !== " "
 						? parisData.wind.speed
-						: console.log("Loading...")
+						: "Loading..."
 				}
 			/>
 		</div>
