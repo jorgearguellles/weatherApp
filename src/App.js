@@ -8,6 +8,7 @@ let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 const App = () => {
 	const [parisData, setParisData] = useState({});
+	const [bogotaData, setBogotaData] = useState({});
 
 	useEffect(() => {
 		makeRequest(
@@ -17,6 +18,18 @@ const App = () => {
 					throw error;
 				}
 				setParisData(data);
+			}
+		);
+	});
+
+	useEffect(() => {
+		makeRequest(
+			"https://api.openweathermap.org/data/2.5/onecall?lat=4.6097&lon=-74.0817&exclude=minutely,alerts,hourly&appid=a4d7ee06ed7e293bdc37a1d8b18e7424&units=metric",
+			function (error, data) {
+				if (error) {
+					throw error;
+				}
+				setBogotaData(data);
 			}
 		);
 	});
@@ -41,7 +54,13 @@ const App = () => {
 
 	return (
 		<div>
-			<MainSection />
+			<MainSection
+				temperature={
+					bogotaData.current !== undefined && bogotaData.current["temp"] !== " "
+						? bogotaData.current["temp"]
+						: "Loading..."
+				}
+			/>
 			<SecondSection
 				cityName={parisData.name}
 				countryName={
