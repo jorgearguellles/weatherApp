@@ -16,7 +16,7 @@
 }
 
 .weatherPlace p {
-	font-size: 3rem;
+	font-size: 4rem;
 	font-weight: bold;
 	color: var(--dark-purple);
 }
@@ -31,6 +31,26 @@
 
 /* Current weather */
 
+.bigContainer {
+	position: absolute;
+	top: 12rem;
+}
+
+.darkPurple {
+	background-color: var(--dark-purple);
+	width: 2rem;
+	height: 2.5rem;
+}
+
+.darkPurpleTransparent {
+	position: relative;
+	top: -2.5rem;
+	background-color: var(--just-white);
+	border-bottom-left-radius: 2rem;
+	width: 2rem;
+	height: 2rem;
+}
+
 .weatherPlaceContainer {
 	background-color: var(--light-purple);
 	width: 9rem;
@@ -38,14 +58,33 @@
 	border-top-right-radius: 3rem;
 	border-bottom-right-radius: 3rem;
 	position: absolute;
-	top: 14rem;
+	top: 2rem;
 	z-index: 1;
+}
+
+.lightPurple {
+	background-color: var(--light-purple);
+	width: 2rem;
+	height: 2.5rem;
+	position: relative;
+	top: 16.5rem;
+}
+
+.lightPurpleTransparent {
+	background-color: var(--just-white);
+	border-top-left-radius: 3rem;
+	border: 1 solid red;
+	width: 2rem;
+	height: 2.5rem;
+	position: relative;
+	top: 14rem;
 }
 
 .weatherImg {
 	background-color: var(--dark-purple);
 	border-top-right-radius: 3rem;
 	border-bottom-right-radius: 3rem;
+	border-bottom-left-radius: 1.5rem;
 	width: 9rem;
 	height: 10rem;
 }
@@ -53,7 +92,7 @@
 .imgWeather {
 	width: 4rem;
 	height: 4rem;
-	margin: 2.5rem 2rem;
+	margin: 2.9rem 2rem;
 }
 
 .centigrades {
