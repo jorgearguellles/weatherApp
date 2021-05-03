@@ -39,10 +39,26 @@ const App = () => {
 			<MainSection />
 			<SecondSection
 				cityName={parisData.name}
-				countryName={parisData.sys.country}
-				temperature={parisData.main.temp}
-				humidity={parisData.main.humidity}
-				windSpeed={parisData.wind.speed}
+				countryName={
+					parisData.sys !== undefined && parisData.sys.country !== " "
+						? parisData.sys.country
+						: "Loading..."
+				}
+				temperature={
+					parisData.main !== undefined && parisData.main.temp !== " "
+						? parisData.main.temp
+						: "Loading..."
+				}
+				humidity={
+					parisData.main !== undefined && parisData.main.humidity !== " "
+						? parisData.main.humidity
+						: "Loading..."
+				}
+				windSpeed={
+					parisData.main !== undefined && parisData.wind.speed !== " "
+						? parisData.wind.speed
+						: "Loading..."
+				}
 			/>
 		</div>
 	);

@@ -49,11 +49,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	z-index: 2;
 }
 
-.weatherNumberContainer:hover {
+.dayContainer:hover .weatherNumberContainer {
 	background-color: var(--dark-purple);
 	color: var(--just-white);
 }
