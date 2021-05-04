@@ -17,6 +17,7 @@ const MainSection = (props) => {
 				<div className={styles.weatherPlaceContainer}>
 					<div className={styles.weatherImg}>
 						<img className={styles.imgWeather} src={imgSun} alt="img cloud" />
+						<p className={styles.weather}>{props.weather}</p>
 					</div>
 					<div className={styles.centigrades}>
 						<p className={styles.weatherNumber}>{props.temperature}</p>
