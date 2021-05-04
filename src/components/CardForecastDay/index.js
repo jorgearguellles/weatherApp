@@ -14,7 +14,9 @@ const CardForecastDay = (props) => {
 				</div>
 			</div>
 			<div className={styles.weatherNumberContainer}>
-				<p className={styles.weatherNumber}>{props.weatherNumber}</p>
+				<p className={styles.weatherNumber}>
+					{props.weatherNumberMax} /{props.weatherNumberMin}
+				</p>
 			</div>
 		</div>
 	);

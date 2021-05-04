@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./MainSection.module.css";
 import imgPin from "../../img/locationPin.png";
-import imgSun from "../../img/sun.png";
+// import imgSun from "../../img/sun.png";
 
 const MainSection = (props) => {
 	return (
@@ -16,7 +16,11 @@ const MainSection = (props) => {
 				<div className={styles.darkPurpleTransparent}></div>
 				<div className={styles.weatherPlaceContainer}>
 					<div className={styles.weatherImg}>
-						<img className={styles.imgWeather} src={imgSun} alt="img cloud" />
+						<img
+							className={styles.imgWeather}
+							src={props.img}
+							alt="img cloud"
+						/>
 						<p className={styles.weather}>{props.weather}</p>
 					</div>
 					<div className={styles.centigrades}>

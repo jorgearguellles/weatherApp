@@ -96,6 +96,11 @@
 	margin: 2.9rem 2rem;
 }
 
+.weather {
+	color: var(--just-white);
+	margin: -2.9rem 2.5rem;
+}
+
 .centigrades {
 	display: flex;
 	margin: 2.5rem 2rem;
