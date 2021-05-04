@@ -2,7 +2,8 @@
 
 .weatherPlace {
 	border-radius: 3rem;
-	height: 37rem;
+	/* height: 37rem; */
+	height: 50vh;
 	min-width: 27rem;
 	background-image: url("../../img/bogotaPic.jpg");
 	background-position: center;
@@ -34,7 +35,8 @@
 
 .bigContainer {
 	position: absolute;
-	top: 12rem;
+	/* top: 12rem; */
+	top: 20vh;
 }
 
 .darkPurple {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
+import styles from "./App.css";
 
 import MainSection from "./components/MainSection/index.js";
 import SecondSection from "./components/SecondSection/index.js";
@@ -12,7 +13,7 @@ const App = () => {
 
 	useEffect(() => {
 		makeRequest(
-			"http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=a4d7ee06ed7e293bdc37a1d8b18e7424&units=metric",
+			"http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=857745c96799b4b642a4438dcc45062e&units=metric",
 			function (error, data) {
 				if (error) {
 					throw error;
@@ -21,7 +22,7 @@ const App = () => {
 			}
 		);
 		makeRequest(
-			"https://api.openweathermap.org/data/2.5/onecall?lat=4.6097&lon=-74.0817&exclude=minutely,alerts,hourly&appid=a4d7ee06ed7e293bdc37a1d8b18e7424&units=metric",
+			"https://api.openweathermap.org/data/2.5/onecall?lat=4.6097&lon=-74.0817&exclude=minutely,alerts,hourly&appid=857745c96799b4b642a4438dcc45062e&units=metric",
 			function (error, data) {
 				if (error) {
 					throw error;
@@ -50,7 +51,7 @@ const App = () => {
 	}
 
 	return (
-		<div>
+		<div className={styles.container}>
 			<MainSection
 				temperature={
 					bogotaData.current !== undefined && bogotaData.current["temp"] !== " "

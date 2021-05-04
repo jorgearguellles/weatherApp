@@ -1,5 +1,7 @@
 .container {
-	height: auto;
+	/* height: auto; */
+	height: 40vh;
+
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
