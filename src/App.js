@@ -13,6 +13,7 @@ const App = () => {
 
 	useEffect(() => {
 		makeRequest(
+			"GET",
 			"http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=857745c96799b4b642a4438dcc45062e&units=metric",
 			function (error, data) {
 				if (error) {
@@ -22,6 +23,7 @@ const App = () => {
 			}
 		);
 		makeRequest(
+			"GET",
 			"https://api.openweathermap.org/data/2.5/onecall?lat=4.6097&lon=-74.0817&exclude=minutely,alerts,hourly&appid=857745c96799b4b642a4438dcc45062e&units=metric",
 			function (error, data) {
 				if (error) {
@@ -32,22 +34,36 @@ const App = () => {
 		);
 	}, []);
 
-	function makeRequest(url_api, callback) {
-		let xhttp = new XMLHttpRequest();
+	// function makeRequest(url_api, callback) {
+	// 	let xhttp = new XMLHttpRequest();
 
-		xhttp.open("GET", url_api, true);
+	// 	xhttp.open("GET", url_api, true);
 
-		xhttp.onreadystatechange = function (event) {
-			if (xhttp.readyState === 4) {
-				if (xhttp.status === 200) {
-					callback(null, JSON.parse(xhttp.responseText));
-				} else {
-					const error = new Error("Error:" + url_api);
-					return callback(error, null);
-				}
-			}
+	// 	xhttp.onreadystatechange = function (event) {
+	// 		if (xhttp.readyState === 4) {
+	// 			if (xhttp.status === 200) {
+	// 				callback(null, JSON.parse(xhttp.responseText));
+	// 			} else {
+	// 				const error = new Error("Error:" + url_api);
+	// 				return callback(error, null);
+	// 			}
+	// 		}
+	// 	};
+	// 	xhttp.send();
+	// }
+
+	function makeRequest(method, url, callback) {
+		let xmlhttp = new XMLHttpRequest();
+
+		xmlhttp.open(method, url);
+
+		xmlhttp.onload = function () {
+			callback(null, xmlhttp.response);
 		};
-		xhttp.send();
+		xmlhttp.onerror = function () {
+			callback(xmlhttp.response);
+		};
+		xmlhttp.send();
 	}
 
 	return (
