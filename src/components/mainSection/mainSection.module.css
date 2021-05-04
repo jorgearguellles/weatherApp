@@ -2,13 +2,13 @@
 
 .weatherPlace {
 	border-radius: 3rem;
-	height: 37rem;
+	height: 50vh;
 	min-width: 27rem;
-	background-image: url("../../img/museum.jpg");
+	background-image: url("../../img/bogotaPic.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 8rem;
+	padding: 6.5rem;
 	display: flex;
 	margin: 4.5rem 4rem 4rem 4rem;
 	margin-bottom: 1.9rem;
@@ -16,7 +16,8 @@
 }
 
 .weatherPlace p {
-	font-size: 2rem;
+	height: 5rem;
+	font-size: 4rem;
 	font-weight: bold;
 	color: var(--dark-purple);
 }
@@ -24,42 +25,85 @@
 .weatherPlace img {
 	background-color: var(--dark-purple);
 	border-radius: 3rem;
-	width: 2rem;
-	height: 2rem;
-	margin: 0 2rem 0 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 1rem 2rem 0 2rem;
 }
 
 /* Current weather */
 
+.bigContainer {
+	position: absolute;
+	top: 20vh;
+}
+
+.darkPurple {
+	background-color: var(--dark-purple);
+	width: 2rem;
+	height: 2.5rem;
+}
+
+.darkPurpleTransparent {
+	position: relative;
+	top: -2.5rem;
+	background-color: var(--just-white);
+	border-bottom-left-radius: 2rem;
+	width: 2rem;
+	height: 2rem;
+}
+
 .weatherPlaceContainer {
 	background-color: var(--light-purple);
-	width: 10rem;
+	width: 9rem;
 	height: 19rem;
 	border-top-right-radius: 3rem;
 	border-bottom-right-radius: 3rem;
-	/* border-bottom-left-radius: 3rem 5rem 3rem; */
 	position: absolute;
-	top: 14rem;
+	top: 2rem;
 	z-index: 1;
+}
+
+.lightPurple {
+	background-color: var(--light-purple);
+	width: 2rem;
+	height: 2.5rem;
+	position: relative;
+	top: 16.5rem;
+}
+
+.lightPurpleTransparent {
+	background-color: var(--just-white);
+	border-top-left-radius: 3rem;
+	border: 1 solid red;
+	width: 2rem;
+	height: 2.5rem;
+	position: relative;
+	top: 14rem;
 }
 
 .weatherImg {
 	background-color: var(--dark-purple);
 	border-top-right-radius: 3rem;
 	border-bottom-right-radius: 3rem;
-	width: 10rem;
+	border-bottom-left-radius: 1.5rem;
+	width: 9rem;
 	height: 10rem;
 }
 
 .imgWeather {
 	width: 4rem;
 	height: 4rem;
-	margin: 2.5rem;
+	margin: 2.9rem 2rem;
+}
+
+.weather {
+	color: var(--just-white);
+	margin: -2.9rem 2.5rem;
 }
 
 .centigrades {
 	display: flex;
-	margin: 2.5rem;
+	margin: 2.5rem 2rem;
 }
 .centigrades p {
 	color: var(--just-white);
