@@ -30,7 +30,7 @@ const App = () => {
 				setBogotaData(data);
 			}
 		);
-	});
+	}, []);
 
 	function makeRequest(url_api, callback) {
 		let xhttp = new XMLHttpRequest();
