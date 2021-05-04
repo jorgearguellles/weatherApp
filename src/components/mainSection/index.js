@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./mainSection.module.css";
+import styles from "./MainSection.module.css";
 import imgPin from "../../img/locationPin.png";
 import imgSun from "../../img/sun.png";
 

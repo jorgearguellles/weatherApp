@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./index.css";
-import styles from "./App.css";
-
 import MainSection from "./components/MainSection/index.js";
 import SecondSection from "./components/SecondSection/index.js";
-
-let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+import { makeRequest } from "./services/index";
+import styles from "./App.css";
+import "./index.css";
 
 const App = () => {
 	const [parisData, setParisData] = useState({});
@@ -33,38 +31,6 @@ const App = () => {
 			}
 		);
 	}, []);
-
-	// function makeRequest(url_api, callback) {
-	// 	let xhttp = new XMLHttpRequest();
-
-	// 	xhttp.open("GET", url_api, true);
-
-	// 	xhttp.onreadystatechange = function (event) {
-	// 		if (xhttp.readyState === 4) {
-	// 			if (xhttp.status === 200) {
-	// 				callback(null, JSON.parse(xhttp.responseText));
-	// 			} else {
-	// 				const error = new Error("Error:" + url_api);
-	// 				return callback(error, null);
-	// 			}
-	// 		}
-	// 	};
-	// 	xhttp.send();
-	// }
-
-	function makeRequest(method, url, callback) {
-		let xmlhttp = new XMLHttpRequest();
-
-		xmlhttp.open(method, url);
-
-		xmlhttp.onload = function () {
-			callback(null, xmlhttp.response);
-		};
-		xmlhttp.onerror = function () {
-			callback(xmlhttp.response);
-		};
-		xmlhttp.send();
-	}
 
 	return (
 		<div className={styles.container}>
