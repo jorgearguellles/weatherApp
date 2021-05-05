@@ -1,31 +1,137 @@
-import React from "react";
+import React, { useContext } from "react";
+import dataContext from "../../context/data";
 
 import styles from "./SecondSection.module.css";
 import CardForecastDay from "../CardForecastDay/index.js";
 import imgPin from "../../img/locationPin.png";
 import imgFace from "../../img/face.jpg";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
+function day(dt) {
+	const unixTimestamp = dt;
+	const milliseconds = unixTimestamp * 1000;
+	const dateObject = new Date(milliseconds);
+	let day = dateObject.toLocaleString("en-US", { weekday: "long" });
+	return day;
+}
+
+function iconImg(icon) {
+	return `http://openweathermap.org/img/wn/${icon}@2x.png`;
+}
 
 const SecondSection = (props) => {
+	const data = useContext(dataContext);
+	console.log("Listo", data);
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.forecastContainer}>
 				<p className={styles.titleSection}>
 					<strong>3 Days</strong> Forecast
 				</p>
+				{function () {
+					for (let i = 0; i < 3; i++) {
+						return (
+							<CardForecastDay
+								day={
+									data.daily !== undefined && data.daily[i].dt !== " " ? (
+										day(data.daily[i].dt)
+									) : (
+										<Loader
+											type="Bars"
+											color="#6e6e6e"
+											height={20}
+											width={20}
+											timeout={3000} //3 secs
+										/>
+									)
+								}
+								weatherImg={data.current.weather[i].icon}
+								weather={data.current.weather[0].main}
+								weatherNumberMin={data.daily[i].temp["min"]}
+								weatherNumberMax={data.daily[i].temp["max"]}
+							/>
+						);
+					}
+				}}
+
+				{/* <CardForecastDay
+					day={day(
+						data.daily !== undefined && data.daily[0]["dt"] !== " " ? (
+							day(data.daily["dt"])
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					)}
+					weatherImg={
+						data.daily !== undefined && data.daily.weather["icon"] !== " " ? (
+							iconImg(data.daily.weather[0]["icon"])
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					weather={
+						data.daily !== undefined &&
+						data.daily[0].weather[0]["main"] !== " " ? (
+							data.daily[0].weather[0]["main"]
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					weatherMin={
+						data.daily !== undefined && data.daily[0].temp["min"] !== " " ? (
+							data.daily[0].temp["min"]
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					weatherMax={
+						data.daily !== undefined && data.daily[0].temp["max"] !== " " ? (
+							data.daily[0].temp["max"]
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+				/> */}
 				<CardForecastDay
-					day="Friday"
-					weather="Clouds"
-					weatherNumberMax="34"
-					weatherNumberMin="45"
-				/>
-				<CardForecastDay
-					day="Saturday"
+					day="Lunes"
 					weather="Sun"
 					weatherNumberMax="34"
 					weatherNumberMin="45"
 				/>
 				<CardForecastDay
-					day="Sunday"
+					day="Lunes"
 					weather="Rain"
 					weatherNumberMax="34"
 					weatherNumberMin="45"

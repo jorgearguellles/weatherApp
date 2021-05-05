@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import MainSection from "./components/MainSection/index.js";
 import SecondSection from "./components/SecondSection/index.js";
 import { makeRequest } from "./services/index";
+import dataContext from "./context/data";
+
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import styles from "./App.css";
@@ -22,7 +24,7 @@ const App = () => {
 				if (error) {
 					throw error;
 				}
-				console.log("Paris:", data);
+				// console.log("Paris:", data);
 				setParisData(data);
 			}
 		);
@@ -32,128 +34,130 @@ const App = () => {
 				if (error) {
 					throw error;
 				}
-				console.log("Bogotá:", data);
+				// console.log("Bogotá:", data);
 				setBogotaData(data);
 			}
 		);
 	}, []);
 
 	return (
-		<div className={styles.container}>
-			<MainSection
-				img={
-					bogotaData.current !== undefined &&
-					bogotaData.current.weather[0]["icon"] !== " " ? (
-						iconImg(bogotaData.current.weather[0]["icon"])
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-				weather={
-					bogotaData.current !== undefined &&
-					bogotaData.current["temp"] !== " " ? (
-						bogotaData.current.weather[0]["main"]
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-				temperature={
-					bogotaData.current !== undefined &&
-					bogotaData.current["temp"] !== " " ? (
-						bogotaData.current["temp"]
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-			/>
-			<SecondSection
-				cityName={parisData.name}
-				countryName={
-					parisData.sys !== undefined && parisData.sys.country !== " " ? (
-						parisData.sys.country
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-				imgWeather={
-					parisData.main !== undefined &&
-					parisData.weather[0]["icon"] !== " " ? (
-						iconImg(parisData.weather[0]["icon"])
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-				temperature={
-					parisData.main !== undefined && parisData.main.temp !== " " ? (
-						parisData.main.temp
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-				humidity={
-					parisData.main !== undefined && parisData.main.humidity !== " " ? (
-						parisData.main.humidity
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-				windSpeed={
-					parisData.main !== undefined && parisData.wind.speed !== " " ? (
-						parisData.wind.speed
-					) : (
-						<Loader
-							type="BallTriangle"
-							color="#00BFFF"
-							height={20}
-							width={20}
-							timeout={3000} //3 secs
-						/>
-					)
-				}
-			/>
-		</div>
+		<dataContext.Provider value={bogotaData}>
+			<div className={styles.container}>
+				<MainSection
+					img={
+						bogotaData.current !== undefined &&
+						bogotaData.current.weather[0]["icon"] !== " " ? (
+							iconImg(bogotaData.current.weather[0]["icon"])
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					weather={
+						bogotaData.current !== undefined &&
+						bogotaData.current["temp"] !== " " ? (
+							bogotaData.current.weather[0]["main"]
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					temperature={
+						bogotaData.current !== undefined &&
+						bogotaData.current["temp"] !== " " ? (
+							bogotaData.current["temp"]
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+				/>
+				<SecondSection
+					cityName={parisData.name}
+					countryName={
+						parisData.sys !== undefined && parisData.sys.country !== " " ? (
+							parisData.sys.country
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					imgWeather={
+						parisData.main !== undefined &&
+						parisData.weather[0]["icon"] !== " " ? (
+							iconImg(parisData.weather[0]["icon"])
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					temperature={
+						parisData.main !== undefined && parisData.main.temp !== " " ? (
+							parisData.main.temp
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					humidity={
+						parisData.main !== undefined && parisData.main.humidity !== " " ? (
+							parisData.main.humidity
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+					windSpeed={
+						parisData.main !== undefined && parisData.wind.speed !== " " ? (
+							parisData.wind.speed
+						) : (
+							<Loader
+								type="Bars"
+								color="#6e6e6e"
+								height={20}
+								width={20}
+								timeout={3000} //3 secs
+							/>
+						)
+					}
+				/>
+			</div>
+		</dataContext.Provider>
 	);
 };
 

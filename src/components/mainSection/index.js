@@ -2,7 +2,6 @@ import React from "react";
 
 import styles from "./mainSection.module.css";
 import imgPin from "../../img/locationPin.png";
-// import imgSun from "../../img/sun.png";
 
 const MainSection = (props) => {
 	return (
