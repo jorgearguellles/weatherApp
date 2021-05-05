@@ -11,7 +11,6 @@
 
 .forecastContainer {
 	height: 28rem;
-	overflow: scroll;
 	width: 26rem;
 	min-width: 28rem;
 	margin: 2rem 0 2rem 2rem;
@@ -39,6 +38,14 @@
 	font-weight: 300;
 	font-size: 2.5rem;
 	margin-bottom: 3.3rem;
+}
+
+/* Card Forecast Container */
+
+.cardContainer {
+	overflow: scroll;
+	height: 21.3rem;
+	width: 26rem;
 }
 
 /* Place to visit - Section */

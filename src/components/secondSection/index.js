@@ -5,6 +5,8 @@ import styles from "./SecondSection.module.css";
 import CardForecastDay from "../CardForecastDay/index.js";
 import imgPin from "../../img/locationPin.png";
 import imgFace from "../../img/face.jpg";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function day(dt) {
 	const unixTimestamp = dt;
@@ -20,7 +22,6 @@ function iconImg(icon) {
 
 const SecondSection = (props) => {
 	const data = useContext(dataContext);
-	console.log("Listo", data);
 
 	return (
 		<div className={styles.container}>
@@ -28,19 +29,31 @@ const SecondSection = (props) => {
 				<p className={styles.titleSection}>
 					<strong>3 Days</strong> Forecast
 				</p>
-				{data.daily.map(function (element) {
-					return (
-						<CardForecastDay
-							day={day(element.dt)}
-							weather={element.weather.map((element) => element.main)}
-							weatherImg={iconImg(
-								element.weather.map((element) => element.icon)
-							)}
-							weatherNumberMax={Math.round(element.temp["max"])}
-							weatherNumberMin={Math.round(element.temp["min"])}
+				<div className={styles.cardContainer}>
+					{data !== undefined && data.daily !== undefined ? (
+						data.daily.map(function (element) {
+							return (
+								<CardForecastDay
+									day={day(element.dt)}
+									weather={element.weather.map((element) => element.main)}
+									weatherImg={iconImg(
+										element.weather.map((element) => element.icon)
+									)}
+									weatherNumberMax={Math.round(element.temp["max"])}
+									weatherNumberMin={Math.round(element.temp["min"])}
+								/>
+							);
+						})
+					) : (
+						<Loader
+							type="Bars"
+							color="#6e6e6e"
+							height={20}
+							width={20}
+							timeout={3000} //3 secs
 						/>
-					);
-				})}
+					)}
+				</div>
 			</div>
 			<div className={styles.visitContainer}>
 				<p className={styles.titleSection}>
