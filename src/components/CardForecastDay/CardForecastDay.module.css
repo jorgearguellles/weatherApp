@@ -9,6 +9,7 @@
 	align-items: center;
 	z-index: 1;
 	margin-top: 1.3rem;
+	overflow: hidden;
 }
 
 .dayContainer:hover {

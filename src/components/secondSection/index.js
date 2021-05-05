@@ -5,8 +5,6 @@ import styles from "./SecondSection.module.css";
 import CardForecastDay from "../CardForecastDay/index.js";
 import imgPin from "../../img/locationPin.png";
 import imgFace from "../../img/face.jpg";
-import Loader from "react-loader-spinner";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function day(dt) {
 	const unixTimestamp = dt;
@@ -30,112 +28,19 @@ const SecondSection = (props) => {
 				<p className={styles.titleSection}>
 					<strong>3 Days</strong> Forecast
 				</p>
-				{function () {
-					for (let i = 0; i < 3; i++) {
-						return (
-							<CardForecastDay
-								day={
-									data.daily !== undefined && data.daily[i].dt !== " " ? (
-										day(data.daily[i].dt)
-									) : (
-										<Loader
-											type="Bars"
-											color="#6e6e6e"
-											height={20}
-											width={20}
-											timeout={3000} //3 secs
-										/>
-									)
-								}
-								weatherImg={data.current.weather[i].icon}
-								weather={data.current.weather[0].main}
-								weatherNumberMin={data.daily[i].temp["min"]}
-								weatherNumberMax={data.daily[i].temp["max"]}
-							/>
-						);
-					}
-				}}
-
-				{/* <CardForecastDay
-					day={day(
-						data.daily !== undefined && data.daily[0]["dt"] !== " " ? (
-							day(data.daily["dt"])
-						) : (
-							<Loader
-								type="Bars"
-								color="#6e6e6e"
-								height={20}
-								width={20}
-								timeout={3000} //3 secs
-							/>
-						)
-					)}
-					weatherImg={
-						data.daily !== undefined && data.daily.weather["icon"] !== " " ? (
-							iconImg(data.daily.weather[0]["icon"])
-						) : (
-							<Loader
-								type="Bars"
-								color="#6e6e6e"
-								height={20}
-								width={20}
-								timeout={3000} //3 secs
-							/>
-						)
-					}
-					weather={
-						data.daily !== undefined &&
-						data.daily[0].weather[0]["main"] !== " " ? (
-							data.daily[0].weather[0]["main"]
-						) : (
-							<Loader
-								type="Bars"
-								color="#6e6e6e"
-								height={20}
-								width={20}
-								timeout={3000} //3 secs
-							/>
-						)
-					}
-					weatherMin={
-						data.daily !== undefined && data.daily[0].temp["min"] !== " " ? (
-							data.daily[0].temp["min"]
-						) : (
-							<Loader
-								type="Bars"
-								color="#6e6e6e"
-								height={20}
-								width={20}
-								timeout={3000} //3 secs
-							/>
-						)
-					}
-					weatherMax={
-						data.daily !== undefined && data.daily[0].temp["max"] !== " " ? (
-							data.daily[0].temp["max"]
-						) : (
-							<Loader
-								type="Bars"
-								color="#6e6e6e"
-								height={20}
-								width={20}
-								timeout={3000} //3 secs
-							/>
-						)
-					}
-				/> */}
-				<CardForecastDay
-					day="Lunes"
-					weather="Sun"
-					weatherNumberMax="34"
-					weatherNumberMin="45"
-				/>
-				<CardForecastDay
-					day="Lunes"
-					weather="Rain"
-					weatherNumberMax="34"
-					weatherNumberMin="45"
-				/>
+				{data.daily.map(function (element) {
+					return (
+						<CardForecastDay
+							day={day(element.dt)}
+							weather={element.weather.map((element) => element.main)}
+							weatherImg={iconImg(
+								element.weather.map((element) => element.icon)
+							)}
+							weatherNumberMax={Math.round(element.temp["max"])}
+							weatherNumberMin={Math.round(element.temp["min"])}
+						/>
+					);
+				})}
 			</div>
 			<div className={styles.visitContainer}>
 				<p className={styles.titleSection}>
