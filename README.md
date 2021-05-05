@@ -31,8 +31,3 @@ Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla: [@
 
 
   
-## Vista
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-  
