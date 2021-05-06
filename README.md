@@ -14,10 +14,10 @@ También te muestra la temperatura, el estado del clima, las temperaturas maxima
 
 Esta hecha con :green_heart: y:
 
-* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-* [React.js](https://es.reactjs.org)
-* [OpenWeather API](https://es.reactjs.org)
-* [Desplegado en AWS](https://aws.amazon.com)
+* [Estilos con CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+* [Componentes y lógica con React.js](https://es.reactjs.org)
+* [Datos de OpenWeather API](https://es.reactjs.org)
+* [Desplegada en AWS](https://aws.amazon.com)
 
   
 ## Demo
