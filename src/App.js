@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MainSection from "./components/MainSection/index.js";
-import SecondSection from "./components/SecondSection/index.js";
+import MainSection from "./components/Main/index.js";
+import SecondSection from "./components/Second/index.js";
 import { makeRequest } from "./services/index";
 import dataContext from "./context/data";
 import Loader from "react-loader-spinner";
