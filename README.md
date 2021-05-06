@@ -17,7 +17,7 @@ Esta hecha con :green_heart: y:
 * [Estilos con CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 * [Componentes y lógica con React.js](https://es.reactjs.org)
 * [Datos de OpenWeather API](https://es.reactjs.org)
-* [Desplegada en AWS](https://aws.amazon.com)
+* [Desplegada en AWS Amplify](https://aws.amazon.com)
 
   
 ## Demo
