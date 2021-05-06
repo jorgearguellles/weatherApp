@@ -9,7 +9,7 @@ import styles from "./App.css";
 import "./index.css";
 
 require("dotenv").config({
-	path: `.env.${process.env.NODE_ENV || "development"}`,
+	path: `./.env.${process.env.NODE_ENV || "development"}`,
 });
 
 console.log(process.env.API_KEY);
