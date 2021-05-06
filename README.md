@@ -12,22 +12,22 @@ También te muestra la temperatura, el estado del clima, las temperaturas maxima
   
 ## Documentación
 
-Esta hecha con:
+Esta hecha con :green_heart: y:
 
-* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-* [React.js](https://es.reactjs.org)
-* [OpenWeather API](https://es.reactjs.org)
-* [Desplegado en AWS](https://aws.amazon.com)
+* [Estilos con CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+* [Componentes y lógica con React.js](https://es.reactjs.org)
+* [Datos de OpenWeather API](https://es.reactjs.org)
+* [Desplegada en AWS Amplify](https://aws.amazon.com)
 
   
 ## Demo
 
-[Pruébala](https://developer.mozilla.org/es/docs/Web/CSS)
+[Pruébala](https://main.d32onoc11tul47.amplifyapp.com)
 
   
 ## Retroalimentación
 
-Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
+Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
 
 
   
