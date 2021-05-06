@@ -27,7 +27,7 @@ const SecondSection = (props) => {
 		<div className={styles.container}>
 			<div className={styles.forecastContainer}>
 				<p className={styles.titleSection}>
-					<strong>3 Days</strong> Forecast
+					<strong>7 Days</strong> Forecast
 				</p>
 				<div className={styles.cardContainer}>
 					{data !== undefined && data.daily !== undefined ? (
