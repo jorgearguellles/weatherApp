@@ -24,7 +24,7 @@ const App = () => {
 				if (error) {
 					throw error;
 				}
-				console.log("Paris:", data);
+				// console.log("Paris:", data);
 				setParisData(data);
 			}
 		);
