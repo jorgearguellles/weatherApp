@@ -9,10 +9,10 @@ import styles from "./App.css";
 import "./index.css";
 
 require("dotenv").config({
-	path: `./.env.${process.env.NODE_ENV || "development"}`,
+	path: `/.env.${process.env.NODE_ENV || "development"}`,
 });
 
-console.log(process.env.API_KEY);
+console.log(process.env);
 
 function iconImg(icon) {
 	return `http://openweathermap.org/img/wn/${icon}@2x.png`;
