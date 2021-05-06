@@ -6,14 +6,8 @@ import dataContext from "./context/data";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import styles from "./App.css";
+import env from "react-dotenv";
 import "./index.css";
-
-const { API_KEY } = process.env;
-// require("dotenv").config({
-// 	path: `.env.${process.env.NODE_ENV || "development"}`,
-// });
-
-console.log(process.env);
 
 function iconImg(icon) {
 	return `http://openweathermap.org/img/wn/${icon}@2x.png`;
@@ -25,7 +19,7 @@ const App = () => {
 
 	useEffect(() => {
 		makeRequest(
-			`http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=${API_KEY}&units=metric`,
+			`http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=${env.API_KEY}&units=metric`,
 			function (error, data) {
 				if (error) {
 					throw error;
@@ -35,7 +29,7 @@ const App = () => {
 			}
 		);
 		makeRequest(
-			`https://api.openweathermap.org/data/2.5/onecall?lat=4.6097&lon=-74.0817&exclude=minutely,alerts,hourly&appid=${API_KEY}&units=metric`,
+			`https://api.openweathermap.org/data/2.5/onecall?lat=4.6097&lon=-74.0817&exclude=minutely,alerts,hourly&appid=${env.API_KEY}&units=metric`,
 			function (error, data) {
 				if (error) {
 					throw error;
