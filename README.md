@@ -22,7 +22,7 @@ Esta hecha con:
   
 ## Demo
 
-[Pruébala](https://developer.mozilla.org/es/docs/Web/CSS)
+[Pruébala](https://main.d32onoc11tul47.amplifyapp.com)
 
   
 ## Retroalimentación
