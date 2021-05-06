@@ -19,12 +19,12 @@ const App = () => {
 
 	useEffect(() => {
 		makeRequest(
-			`http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=${env.API_KEY}&units=metric`,
+			`https://api.openweathermap.org/data/2.5/weather?q=Paris,fr&APPID=${env.API_KEY}&units=metric`,
 			function (error, data) {
 				if (error) {
 					throw error;
 				}
-				// console.log("Paris:", data);
+				console.log("Paris:", data);
 				setParisData(data);
 			}
 		);
