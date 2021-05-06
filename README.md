@@ -12,7 +12,7 @@ También te muestra la temperatura, el estado del clima, las temperaturas maxima
   
 ## Documentación
 
-Esta hecha con:
+Esta hecha con :green_heart: y:
 
 * [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 * [React.js](https://es.reactjs.org)
