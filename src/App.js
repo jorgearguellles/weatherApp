@@ -8,11 +8,11 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import styles from "./App.css";
 import "./index.css";
 
-const NODE_ENV = process.env.NODE_ENV || "development";
-
 require("dotenv").config({
-	path: `.env.${NODE_ENV}`,
+	path: `.env.${process.env.NODE_ENV || "development"}`,
 });
+
+console.log(process.env.API_KEY);
 
 function iconImg(icon) {
 	return `http://openweathermap.org/img/wn/${icon}@2x.png`;
