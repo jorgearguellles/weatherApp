@@ -27,7 +27,7 @@ Esta hecha con :green_heart: y:
   
 ## Retroalimentación
 
-Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
+Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
 
 
   
