@@ -25,15 +25,15 @@ Esta hecha con :green_heart: y:
 [Pruébala](https://main.d32onoc11tul47.amplifyapp.com)
 
   
-## Retroalimentación
-
-Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
-
 ## Vista previa
 
 ![App Screenshot](https://github.com/jorgearguellles/weatherApp/blob/main/src/img/previewPAge.png)
 
-  
+ 
+ ## Retroalimentación
+
+Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
+
   
   
   
