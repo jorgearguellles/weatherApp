@@ -29,5 +29,12 @@ Esta hecha con :green_heart: y:
 
 Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
 
+## Vista previa
 
+![App Screenshot](https://github.com/jorgearguellles/weatherApp/blob/main/src/img/previewPAge.png)
+
+  
+  
+  
+  
   
