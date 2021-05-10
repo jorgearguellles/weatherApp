@@ -6,8 +6,8 @@ También te muestra la temperatura, el estado del clima, las temperaturas maxima
 
 ## Autor
 
-- [@JorgeAriasArgüelles - GitHub](https://github.com/jorgearguellles)
-- [@JorgeAriasArgüelles - LinkedIn](https://www.linkedin.com/in/jorgeariasarguelles/)
+Jorge Arias Argüelles en [GitHub](https://github.com/jorgearguellles) y en
+[LinkedIn](https://www.linkedin.com/in/jorgeariasarguelles/)
 
   
 ## Documentación
@@ -32,7 +32,7 @@ Esta hecha con :green_heart: y:
  
  ## Retroalimentación
 
-Si tienes alguna idea que nos ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
+Si tienes alguna idea que ayude a mejorar, sientete libre de compartirla con: [@JorgeAriasArgüelles](https://www.linkedin.com/in/jorgeariasarguelles/)
 
   
   
