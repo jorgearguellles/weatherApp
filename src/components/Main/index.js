@@ -23,7 +23,7 @@ const MainSection = (props) => {
 						<p className={styles.weather}>{props.weather}</p>
 					</div>
 					<div className={styles.centigrades}>
-						<p className={styles.weatherNumber}>{props.temperature}</p>
+						<p className={styles.weatherNumber}>{Math.floor(props.temperature)}</p>
 						<p>ºC</p>
 					</div>
 				</div>
